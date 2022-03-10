@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="card list-car">
+      <h5 class="card-header">Editar Carro</h5>
+      <div class="card-body">
+        <table class="table">
+            <thead>
+
+    <label for="nome" class="form-label">Carro</label>
+    <input class="form-control" name="nome" id="nome" [(ngModel)]="carros.nome">
+    <label for="nome" class="form-label">Cor</label>
+    <input class="form-control" name="nome" id="nome" [(ngModel)]="carros.cor">
+    <label for="nome" class="form-label">Preço</label>
+    <input class="form-control" name="nome" id="nome" [(ngModel)]="carros.preco">
+          
+    <div class="buton">
+    <a href="#" [routerLink]="['/carros']" class="btn btn-secondary">Voltar</a>
+    <button type="submit" (click)="editarCarro()" class="btn btn-success m-4">Editar</button>
+    </div>
+</thead>
+</table>

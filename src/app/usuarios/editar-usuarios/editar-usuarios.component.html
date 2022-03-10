@@ -1,0 +1,23 @@
+
+<div>
+    <!--Label e o nome que fica em cima do input-->
+    <label for="nome" class="form-label">Usuario</label>
+    <input class="form-control" name="nome" id="nome" [(ngModel)]="usuarios.nome">
+
+    <label for="nome" class="form-label">Login</label>
+    <input class="form-control" name="login" id="login" [(ngModel)]="usuarios.login">
+
+    <label for="nome" class="form-label">Senha</label>
+    <input class="form-control" name="senha" id="senha" [(ngModel)]="usuarios.senha">
+
+    <label for="nome" class="form-label">Email</label>
+    <input class="form-control" name="email" id="email" [(ngModel)]="usuarios.email">
+
+    <label for="nome" class="form-label">Data de Nascimento</label>
+    <input class="form-control" name="dataDeNascimento" id="dataDeNascimento" [(ngModel)]="usuarios.dataDeNascimento">
+   
+    <div class="col-12 text-end">
+        <a href="#" [routerLink]="['/usuarios']" class="btn btn-secondary">Voltar</a>
+        <button type="submit" (click)="editarUsuario()" class="btn btn-success m-4">Editar</button>
+        
+</div>

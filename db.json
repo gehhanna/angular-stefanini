@@ -1,0 +1,64 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "NoteBook i10",
+      "preco": 5500
+    },
+    {
+      "id": 2,
+      "nome": "NoteBook da nasa i5",
+      "preco": 4500
+    },
+    {
+      "id": 3,
+      "nome": "teclada gamer",
+      "preco": "755.00",
+      "desconto": 10
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Joao Silva",
+      "login": "juao",
+      "senha": "1234",
+      "email": "juao@gmail.com",
+      "dataDeNascimento": "2000-10-04"
+    },
+    {
+      "nome": "George H",
+      "email": "ge@gmail.com",
+      "dataDeNascimento": "2022-03-17",
+      "login": "gehhanna",
+      "senha": "ge4578",
+      "id": 4
+    }
+  ],
+  "carros": [
+    {
+      "nome": "Fusquinha",
+      "cor": "branco",
+      "preco": "5000",
+      "id": 1
+    },
+    {
+      "nome": "Ferrari",
+      "cor": "vermelha",
+      "preco": "80000",
+      "id": 3
+    },
+    {
+      "nome": "Bmw",
+      "cor": "preta",
+      "preco": "7500",
+      "id": 4
+    },
+    {
+      "nome": "Bmws",
+      "cor": "marrom",
+      "preco": "8000",
+      "id": 5
+    }
+  ]
+}

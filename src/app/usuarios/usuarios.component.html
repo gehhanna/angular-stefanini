@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="card list-car">
+    <h5 class="card-header">Lista de Usuarios</h5>
+    <div class="card-body">
+      <div class="col-md-3 col-12">
+        <a href="#" [routerLink]="['/usuarios/cadastrar']" class="btn btn-outline-success">Cadastrar
+          <i class="fas fa-plus"></i></a>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Login</th>
+            <th scope="col">Senha</th>
+            <th scope="col">Email</th>
+            <th scope="col">Data de Nascimento</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of usuarios">
+            <th scope="row">{{usuario.id}}</th>
+            <td>{{usuario.nome}}</td>
+            <td>{{usuario.login}}</td>
+            <td>{{usuario.senha}}</td>
+            <td>{{usuario.email}}</td>
+            <td>{{usuario.dataDeNascimento}}</td>
+            <button type="button" class="btn btn-warning" (click)="editarUsuario(usuario.id)">editar</button>
+            <button type="button" class="btn btn-danger" (click)="excluirUsuario(usuario.id)">excluir</button>
+          </tr>
+        </tbody>
+      </table>
