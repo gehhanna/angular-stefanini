@@ -6,9 +6,9 @@ import { UsuariosComponent } from './usuarios.component';
 
 const routes: Routes = [
 
-   {path: 'cadastrar', component: CadastrarUsuariosComponent},
-   {path: 'id', component: EditarUsuariosComponent},
-   {path: '', component: UsuariosComponent},
+  {path: 'cadastrar', component: CadastrarUsuariosComponent},
+  {path: ':id', component: EditarUsuariosComponent},
+  {path: '', component: UsuariosComponent},
    
 ];
 

@@ -8,7 +8,10 @@ import { Usuarios } from '../objetos/Usuarios';
 })
 
 export class UsuariosService {
+  // puxar a rota da enviroment e encaminhar para usuarios.
   private readonly API = `${environment.API}usuarios`
+ 
+
   //$http para usar os metodos get,post,put,delete etc.
   constructor(private $http: HttpClient) {
     
@@ -22,18 +25,25 @@ export class UsuariosService {
       return this.$http.post(this.API, usuarios)
     }
 
-    buscarUsuarioID(id:any) {
+    // alterando id para idUsuario para funcionar no backend.
 
-      return this.$http.get<Usuarios>(`${this.API}/${id}`)
+    buscarUsuarioID(idUsuario:any) {
+
+      return this.$http.get<Usuarios>(`${this.API}/${idUsuario}`)
       
     }
 
+
     editarUsuario(usuario: Usuarios){
-    return this.$http.put(`${this.API}/${usuario.id}`, usuario)
+    return this.$http.put(`${this.API}/${usuario.idUsuario}`, usuario)
 
     }
+    // alterando id para idUsuario do backend.
+    excluir(idUsuario: any) {
+      return this.$http.delete(`${this.API}/${idUsuario}`);
+    }
 
-    excluir(id: any) {
-      return this.$http.delete(`${this.API}/${id}`);
+    aniversariantesMes() {
+      return this.$http.get<Usuarios[]>(`${this.API}/aniversariantes`);
     }
 }

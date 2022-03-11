@@ -15,6 +15,7 @@ export class UsuariosComponent implements OnInit {
 
   // usuarios: passando um Array de <Usuarios> [].
   usuarios: Array<Usuarios> = []
+  aniversariantes: Array<Usuarios> = [];
 
   constructor( private usuariosService: UsuariosService , private router: Router) { }
 
@@ -26,9 +27,9 @@ export class UsuariosComponent implements OnInit {
 
     })
   }
-  
-  editarUsuario =  (id: any) => {
-      this.router.navigate(['usuarios',id])
+    // trocando o id para idUsuario para o backend.
+  editarUsuario =  (idUsuario: any) => {
+      this.router.navigate(['usuarios',idUsuario])
 
   }
 
@@ -38,6 +39,12 @@ export class UsuariosComponent implements OnInit {
       error => console.log("Usuário não foi excluído"),
       () => console.log()
     );
+  }
+
+  aniversariantesDoMes = () => {
+    this.usuariosService.aniversariantesMes().subscribe(response => {
+      this.aniversariantes = response;
+    });
   }
 }
 

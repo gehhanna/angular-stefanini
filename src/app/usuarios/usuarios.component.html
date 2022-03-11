@@ -20,14 +20,21 @@
         </thead>
         <tbody>
           <tr *ngFor="let usuario of usuarios">
-            <th scope="row">{{usuario.id}}</th>
+            <th scope="row">{{usuario.idUsuario}}</th>
             <td>{{usuario.nome}}</td>
             <td>{{usuario.login}}</td>
             <td>{{usuario.senha}}</td>
             <td>{{usuario.email}}</td>
             <td>{{usuario.dataDeNascimento}}</td>
-            <button type="button" class="btn btn-warning" (click)="editarUsuario(usuario.id)">editar</button>
-            <button type="button" class="btn btn-danger" (click)="excluirUsuario(usuario.id)">excluir</button>
+            <button type="button" class="btn btn-warning" (click)="editarUsuario(usuario.idUsuario)">editar</button>
+            <button type="button" class="btn btn-danger" (click)="excluirUsuario(usuario.idUsuario)">excluir</button>
           </tr>
         </tbody>
       </table>
+
+    </div>
+  </div>
+</div>
+
+
+

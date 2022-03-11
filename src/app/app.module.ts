@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { CarrosService } from './carros/service/carros.service';
 import { UsuariosService } from './usuarios/service/usuarios.service';
 
 
@@ -24,7 +23,7 @@ import { UsuariosService } from './usuarios/service/usuarios.service';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [UsuariosService,CarrosService],
+  providers: [UsuariosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,7 +4,7 @@ export class Usuarios {
     }
     
     // variaveis.
-    public id: number | undefined;
+    public idUsuario: number | undefined;
     public nome:  String | undefined ;
     public login: String | undefined ;
     public senha: String | undefined ;

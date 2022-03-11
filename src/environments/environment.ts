@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  API: 'http://localhost:3000/' // http://localhost:8080/api/  <<< backend
+  
+  API: 'http://localhost:8080/api/' // http://localhost:8080/api/  <<< backend http://localhost:3000/ <<front.
 }
 
 

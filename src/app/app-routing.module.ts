@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 
    {path: 'home' , component: HomeComponent},
    {path: 'usuarios', loadChildren:() => import ('./usuarios/usuarios.module').then(u => u.UsuariosModule)},
-   {path: 'carros', loadChildren:() => import ('./carros/carros.module').then(c => c.CarrosModule)}
+  
 
   ];
 
